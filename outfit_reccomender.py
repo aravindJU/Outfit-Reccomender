@@ -43,15 +43,40 @@ def recommend_outfit(age, gender):
         else:
             outfit = ["neat top", "comfortable pants", "shoes or sandals"]
 
-    else:  # age > 60
+    elif 61 <= age <= 69:
         if gender == "male":
-            outfit = ["knit sweater", "loose pants", "slip-on shoes"]
+            outfit = ["light knit sweater", "loose trousers", "comfortable loafers"]
         elif gender == "female":
-            outfit = ["light saree or salwar", "cardigan", "comfortable sandals"]
+            outfit = ["light saree or salwar", "cardigan", "low-heel sandals"]
         else:
-            outfit = ["soft shirt", "relaxed trousers", "easy-wear footwear"]
+            outfit = ["soft shirt", "relaxed trousers", "slip-on shoes"]
+
+    elif 70 <= age <= 79:
+        if gender == "male":
+            outfit = ["warm cardigan", "elastic-waist trousers", "slip-on shoes"]
+        elif gender == "female":
+            outfit = ["soft cotton saree", "shawl", "padded sandals"]
+        else:
+            outfit = ["button-up shirt", "soft pants", "easy footwear"]
+
+    elif 80 <= age <= 89:
+        if gender == "male":
+            outfit = ["fleece sweater", "lightweight pants", "supportive slippers"]
+        elif gender == "female":
+            outfit = ["loose salwar suit", "light cardigan", "comfortable flats"]
+        else:
+            outfit = ["loose shirt", "soft trousers", "slip-resistant shoes"]
+
+    elif age >= 90:
+        if gender == "male":
+            outfit = ["soft pullover", "elastic-waist pants", "indoor slippers"]
+        elif gender == "female":
+            outfit = ["light gown", "warm shawl", "non-slip slippers"]
+        else:
+            outfit = ["easy-wear top", "stretch pants", "cushioned shoes"]
 
     return outfit
+
 
 # 🧪 Example usage
 try:
@@ -60,7 +85,7 @@ try:
 
     recommendation = recommend_outfit(age, gender)
     
-    print("\n👚 Recommended Outfit from age 1-100:")
+    print("\n👚 Recommended Outfit:")
     for item in recommendation:
         print(f"• {item}")
 
