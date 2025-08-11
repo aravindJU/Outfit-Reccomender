@@ -60,7 +60,7 @@ try:
 
     recommendation = recommend_outfit(age, gender)
     
-    print("\n👚 Recommended Outfit:")
+    print("\n👚 Recommended Outfit from age 1-100:")
     for item in recommendation:
         print(f"• {item}")
 
