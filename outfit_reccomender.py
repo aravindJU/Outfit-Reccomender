@@ -35,7 +35,7 @@ def recommend_outfit(age, gender):
         else:
             outfit = ["stylish top", "denims", "casual shoes"]
 
-    elif 41 <= age <= 60:
+    elif 41 <= age >= 60:
         if gender == "male":
             outfit = ["polo shirt", "pleated trousers", "formal shoes"]
         elif gender == "female":
