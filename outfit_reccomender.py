@@ -3,7 +3,7 @@ def recommend_outfit(age, gender):
     outfit = []
 
     # Age groups
-    if age <= 5:
+    if age >= 5:
         if gender == "male":
             outfit = ["cartoon t-shirt", "shorts", "velcro sandals"]
         elif gender == "female":
